@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EUebbo74oICnKO0FIek0MXwMQUcrkih9bXNtsXxofLq3V2sZD5OlSEB7biOl8h9SYDQ3k410CI/msPuRpA32Lg==",
+  "success": true,
+  "projectFilePath": "D:\\repos\\Salao\\src\\Business\\Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cesar\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512"
+  ],
+  "logs": []
+}
