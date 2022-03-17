@@ -26,4 +26,12 @@
     <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Clientes\_ListaClientes.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Clientes\_ListaClientes.cshtml" />
+  </ItemGroup>
+
 </Project>

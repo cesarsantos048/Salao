@@ -1,0 +1,10 @@
+D:\repos\Salao\src\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+D:\repos\Salao\src\Business\bin\Debug\netcoreapp3.1\Business.dll
+D:\repos\Salao\src\Business\bin\Debug\netcoreapp3.1\Business.pdb
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.csproj.AssemblyReference.cache
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.dll
+D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.pdb
