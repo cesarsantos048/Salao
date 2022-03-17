@@ -1,4 +1,7 @@
-
 src/App/appsettings.Development.json
 src/App/appsettings.json
+*.dll
+*.cache
 .vs/Salao/v16/.suo
+src/App/bin/
+src/App/obj/
