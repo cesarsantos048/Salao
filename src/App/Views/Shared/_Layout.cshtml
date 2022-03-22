@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">App</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Salão</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,10 +24,10 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Servicos" asp-action="Index">Servicos</a>
+                            <a class="nav-link" asp-area="" asp-controller="Servicos" asp-action="Index">Servicos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
                     </ul>
                 </div>
@@ -39,7 +42,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Salão - <a asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a>
+            &copy; 2022 - Salão
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

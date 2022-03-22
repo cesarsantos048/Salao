@@ -4,12 +4,12 @@
     ViewData["Title"] = "Lista de Serviços";
 }
 
-<h4>@ViewData["Title"]</h4>
+<h6>@ViewData["Title"]</h6>
 
 <p>
-    <a class="btn btn-info" asp-action="Create">Novo Serviço</a>
+    <a class="btn btn-info btn-sm" asp-action="Create">Novo Serviço</a>
 </p>
-<table class="table table-hover">
+<table class="table table-hover table-sm">
     <thead class="thead-dark">
         <tr>
             <th>
@@ -38,9 +38,9 @@
                     @Html.DisplayFor(modelItem => item.Cliente.Apelido)
                 </td>
                 <td>
-                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
-                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
                 </td>
             </tr>
         }

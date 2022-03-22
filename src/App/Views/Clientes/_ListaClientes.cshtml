@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<App.ViewModels.ClienteViewModel>
 
-<table class="table table-hover">
+<table class="table table-hover table-sm">
     <thead class="thead-dark">
         <tr>
             <th>
@@ -30,9 +30,9 @@
                 @Html.DisplayFor(modelItem => item.Telefone)
             </td>
             <td>
-                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
-                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
             </td>
         </tr>
         }

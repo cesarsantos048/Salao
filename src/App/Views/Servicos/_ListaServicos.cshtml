@@ -1,13 +1,19 @@
 ﻿@model IEnumerable<App.ViewModels.ServicoViewModel>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-sm">
         <thead class="thead-dark">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Nome)
                 </th>
                 <th>
+                    @Html.DisplayNameFor(model => model.DataCadastro)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Valor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
                 </th>
                 <th></th>
             </tr>
@@ -20,10 +26,16 @@
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.DataCadastro)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Valor)
                 </td>
                 <td>
-                    <a class="btn btn-info" asp-controller="Servicos" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm" asp-controller="Servicos" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
                 </td>
             </tr>
             }
