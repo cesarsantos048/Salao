@@ -1,8 +1,4 @@
-﻿html {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-}
-
+﻿
 a {
     text-decoration: none;
     color: #f4dfd9;
@@ -33,12 +29,6 @@ body {
 }
 
 
-@media (min-width: 600px) {
-    html {
-        font-size: 18px;
-        font-family: 'Montserrat', sans-serif;
-    }
-}
 
 .footer {
     background-color: transparent;
