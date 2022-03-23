@@ -13,6 +13,6 @@ namespace App.Data
             : base(options)
         {
         }
-        public DbSet<App.ViewModels.ServicoViewModel> ServicoViewModel { get; set; }
+
     }
 }
