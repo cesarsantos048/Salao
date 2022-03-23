@@ -25,7 +25,7 @@ namespace Data.Repository
         {
             return await Db.Servicos.AsNoTracking()
                 .Include(f => f.Cliente)
-                .OrderBy(p => p.Nome).ToListAsync();
+                .OrderByDescending(p => p.DataServico ).ToListAsync();
         }
 
         public async Task<IEnumerable<Servico>> ObterServicosPorCliente(Guid clienteId)
