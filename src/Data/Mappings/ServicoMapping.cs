@@ -1,6 +1,7 @@
 ﻿using Business.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 
 namespace Data.Mappings
 {
@@ -17,6 +18,9 @@ namespace Data.Mappings
             builder.Property(p => p.Descricao)
                 .IsRequired()
                 .HasColumnType("text");
+
+            builder.Property<DateTime>("DataServico")
+                .HasColumnType("datetime2");
 
             builder.ToTable("Servicos");
 

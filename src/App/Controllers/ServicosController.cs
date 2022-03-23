@@ -54,7 +54,7 @@ namespace App.Controllers
 
             await _servicoRepository.Adicionar(_mapper.Map<Servico>(servicoViewModel));
 
-            return View(servicoViewModel);
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Edit(Guid id)
@@ -79,11 +79,8 @@ namespace App.Controllers
             servicoAtualizacao.Nome = servicoViewModel.Nome;
             servicoAtualizacao.Descricao = servicoViewModel.Descricao;
             servicoAtualizacao.Valor = servicoViewModel.Valor;
+            servicoAtualizacao.DataServico = servicoViewModel.DataServico;
             await _servicoRepository.Atualizar(_mapper.Map<Servico>(servicoAtualizacao));
-
-
-
-
 
             return RedirectToAction("Index");
         }

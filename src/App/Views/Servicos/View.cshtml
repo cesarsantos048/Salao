@@ -1,21 +1,21 @@
 ﻿@model App.ViewModels.ServicoViewModel
 
 @{
-    ViewData["Title"] = "Novo Serviço";
+    ViewData["Title"] = "View";
 }
 
-<h6>@ViewData["Title"]</h6>
+<h1>View</h1>
 
+<h4>ServicoViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="View">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="ClienteId" class="control-label"></label>
-                <select asp-for="ClienteId" class="form-control" asp-items="@(new SelectList(Model.Clientes, "Id", "Nome"))">
-                    <option></option>
-                </select>
+                <input asp-for="ClienteId" class="form-control" />
                 <span asp-validation-for="ClienteId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"></label>
-                <textarea cols="40" rows="5" asp-for="Descricao" class="form-control"></textarea>
+                <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -39,13 +39,20 @@
                 <span asp-validation-for="DataServico" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-                <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
+                <label asp-for="DataCadastro" class="control-label"></label>
+                <input asp-for="DataCadastro" class="form-control" />
+                <span asp-validation-for="DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
