@@ -25,7 +25,7 @@ namespace App.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(_mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.ObterTodos()));
+            return View(_mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar()));
         }
 
         public async Task<IActionResult> Details(Guid id)

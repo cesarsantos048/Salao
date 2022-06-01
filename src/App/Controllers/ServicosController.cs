@@ -6,6 +6,7 @@ using App.ViewModels;
 using Business.Interfaces;
 using AutoMapper;
 using Business.Models;
+using Business.Services;
 
 namespace App.Controllers
 {
@@ -13,20 +14,29 @@ namespace App.Controllers
     {
         private readonly IServicoRepository _servicoRepository;
         private readonly IClienteRepository _clienteRepository;
+        private readonly ServicoService _servicoService;
         private readonly IMapper _mapper;
 
         public ServicosController(IServicoRepository servicoRepository,
                                   IClienteRepository clienteRepository,
+                                  ServicoService servicoService,
                                   IMapper mapper)
         {
             _servicoRepository = servicoRepository;
             _clienteRepository = clienteRepository;
+            _servicoService = servicoService;
             _mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
         {
             return View(_mapper.Map<IEnumerable<ServicoViewModel>>(await _servicoRepository.ObterServicosClientes()));
+        }
+
+        public async Task<IActionResult> BuscarPorData(DateTime? minDate, DateTime? maxDate)
+        {
+            var result = _mapper.Map<IEnumerable<ServicoViewModel>>(await _servicoService.BuscarPorData(minDate, maxDate));
+            return View(result);
         }
 
         public async Task<IActionResult> Details(Guid id)

@@ -5010,24 +5010,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cesar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Cesar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\Salao\\src\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\repos\\SalaoSqlite\\src\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\repos\\Salao\\src\\Data\\Data.csproj",
+      "projectPath": "D:\\repos\\SalaoSqlite\\src\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\Cesar\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\Salao\\src\\Data\\obj\\",
+      "outputPath": "D:\\repos\\SalaoSqlite\\src\\Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5041,8 +5036,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\repos\\Salao\\src\\Business\\Business.csproj": {
-              "projectPath": "D:\\repos\\Salao\\src\\Business\\Business.csproj"
+            "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj": {
+              "projectPath": "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj"
             }
           }
         }
@@ -5091,7 +5086,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

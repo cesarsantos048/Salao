@@ -12,9 +12,9 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    ServicoId = table.Column<Guid>(nullable: false),
                     Nome = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Apelido = table.Column<string>(type: "varchar(50)", nullable: false)
+                    Apelido = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Telefone = table.Column<string>(type: "varchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -30,6 +30,7 @@ namespace Data.Migrations
                     Nome = table.Column<string>(type: "varchar(200)", nullable: false),
                     Valor = table.Column<decimal>(nullable: false),
                     Descricao = table.Column<string>(type: "text", nullable: false),
+                    DataServico = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataCadastro = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
