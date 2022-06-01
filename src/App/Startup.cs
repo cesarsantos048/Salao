@@ -1,5 +1,6 @@
 using App.Data;
 using Business.Interfaces;
+using Business.Services;
 using Data.Context;
 using Data.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -46,6 +47,7 @@ namespace App
             services.AddScoped<MeuDbContext>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<ServicoService, ServicoService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

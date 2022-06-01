@@ -10,5 +10,7 @@ namespace Business.Interfaces
         Task<IEnumerable<Servico>> ObterServicosPorCliente(Guid clienteId);
         Task<IEnumerable<Servico>> ObterServicosClientes();
         Task<Servico> ObterServicoCliente(Guid id);
+
+        Task<List<Servico>> BuscarPorData(DateTime? minDate, DateTime? maxDate);
     }
 }
