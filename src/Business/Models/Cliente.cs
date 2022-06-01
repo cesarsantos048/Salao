@@ -4,6 +4,7 @@ namespace Business.Models
 {
     public class Cliente : Entity
     {
+
         public string Nome { get; set; }
 
         public string Apelido { get; set; }

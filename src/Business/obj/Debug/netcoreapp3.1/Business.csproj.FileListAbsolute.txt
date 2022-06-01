@@ -8,3 +8,13 @@ D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
 D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
 D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.dll
 D:\repos\Salao\src\Business\obj\Debug\netcoreapp3.1\Business.pdb
+D:\repos\SalaoSqlite\src\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+D:\repos\SalaoSqlite\src\Business\bin\Debug\netcoreapp3.1\Business.dll
+D:\repos\SalaoSqlite\src\Business\bin\Debug\netcoreapp3.1\Business.pdb
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.csproj.AssemblyReference.cache
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.dll
+D:\repos\SalaoSqlite\src\Business\obj\Debug\netcoreapp3.1\Business.pdb

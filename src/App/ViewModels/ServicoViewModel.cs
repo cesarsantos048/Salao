@@ -41,5 +41,10 @@ namespace App.ViewModels
         public ClienteViewModel Cliente { get; set; }
         [NotMapped]
         public IEnumerable<ClienteViewModel> Clientes { get; set; }
+
+        public ServicoViewModel()
+        {
+            DataServico = DateTime.Today.Date;
+        }
     }
 }

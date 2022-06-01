@@ -1,5 +1,6 @@
 using App.Data;
 using Business.Interfaces;
+using Business.Services;
 using Data.Context;
 using Data.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -31,11 +32,11 @@ namespace App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+                options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContext<MeuDbContext>(options =>
-                options.UseSqlServer(
+                options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -46,6 +47,7 @@ namespace App
             services.AddScoped<MeuDbContext>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<ServicoService, ServicoService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
