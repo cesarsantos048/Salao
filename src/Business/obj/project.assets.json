@@ -47,11 +47,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj",
+      "projectUniqueName": "D:\\repos\\Salao\\src\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj",
+      "projectPath": "D:\\repos\\Salao\\src\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\Cesar\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\SalaoSqlite\\src\\Business\\obj\\",
+      "outputPath": "D:\\repos\\Salao\\src\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",

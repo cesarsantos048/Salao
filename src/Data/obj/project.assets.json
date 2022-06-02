@@ -5015,11 +5015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\SalaoSqlite\\src\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\repos\\Salao\\src\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\repos\\SalaoSqlite\\src\\Data\\Data.csproj",
+      "projectPath": "D:\\repos\\Salao\\src\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\Cesar\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\SalaoSqlite\\src\\Data\\obj\\",
+      "outputPath": "D:\\repos\\Salao\\src\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5036,8 +5036,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj": {
-              "projectPath": "D:\\repos\\SalaoSqlite\\src\\Business\\Business.csproj"
+            "D:\\repos\\Salao\\src\\Business\\Business.csproj": {
+              "projectPath": "D:\\repos\\Salao\\src\\Business\\Business.csproj"
             }
           }
         }
