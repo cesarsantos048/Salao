@@ -27,9 +27,7 @@ namespace App.Controllers
             [FromQuery] int? skip,
             [FromQuery] int? take)
         {
-            if (take > 100)
-                return View();
-
+            
             var data = _mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar(skip ?? 0, take ?? 10));
             return View(data);
         }
