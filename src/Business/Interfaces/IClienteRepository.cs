@@ -8,6 +8,6 @@ namespace Business.Interfaces
     public interface IClienteRepository : IRepository<Cliente>
     {
         Task<Cliente> ObterClienteServicos(Guid id);
-        Task<IEnumerable<Cliente>> Ordenar();
+        Task<IEnumerable<Cliente>> Ordenar(int skip, int take);
     }
 }

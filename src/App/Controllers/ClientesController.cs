@@ -23,10 +23,18 @@ namespace App.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(
+            [FromQuery] int? skip,
+            [FromQuery] int? take)
         {
-            return View(_mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar()));
+            if (take > 100)
+                return View();
+
+            var data = _mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar(skip ?? 0, take ?? 10));
+            return View(data);
         }
+
+
 
         public async Task<IActionResult> Details(Guid id)
         {

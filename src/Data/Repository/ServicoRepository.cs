@@ -16,15 +16,14 @@ namespace Data.Repository
         public async Task<List<Servico>> BuscarPorData(DateTime? minDate, DateTime? maxDate)
         {
             var result = from obj in Db.Servicos select obj;
+            if(!maxDate.HasValue || maxDate > DateTime.Now)
+            {
+                maxDate = DateTime.Now;
+            }
             if(minDate.HasValue)
             {
-                result = result.Where(x => x.DataServico >= minDate.Value);
+                result = result.Where(x => x.DataServico >= minDate.Value && x.DataServico <= maxDate.Value);
             }
-            if (maxDate.HasValue)
-            {
-                result = result.Where(x => x.DataServico >= maxDate.Value);
-            }
-
 
             return await result
                 .Include(x=> x.Cliente)

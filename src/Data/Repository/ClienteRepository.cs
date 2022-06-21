@@ -21,10 +21,14 @@ namespace Data.Repository
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<IEnumerable<Cliente>> Ordenar()
+        public async Task<IEnumerable<Cliente>> Ordenar(int skip, int take)
         {
-            return await Db.Clientes.AsNoTracking()
-                 .OrderBy(p => p.Nome).ToListAsync();
+            return await Db.Clientes
+                .AsNoTracking()
+                .OrderBy(p => p.Nome)
+                .Skip(skip)
+                .Take(take)
+                .ToListAsync();
         }
     }
 }
