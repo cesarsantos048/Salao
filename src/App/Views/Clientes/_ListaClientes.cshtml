@@ -18,23 +18,88 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apelido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
-                <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
-                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apelido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil"></span></a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+<nav>
+    @{
+        var totalPages = (ViewBag.total / ViewBag.take);
+        var total = totalPages + ViewBag.take;
+        if (ViewBag.totalPages > total)
+        {
+            totalPages = totalPages + 1;
+        }
+        
+    }
+    <div>
+        @if (ViewBag.page == 1)
+        {
+            <label class="control-label">Exibindo de @ViewBag.page até @(ViewBag.page * ViewBag.take)</label>
+        }
+        else
+        {
+            <label class="control-label">Exibindo de @((ViewBag.page -1 ) * ViewBag.take + 1) até @((ViewBag.page) * ViewBag.take)</label>
+
+        }
+        <label class="control-label">de @ViewBag.total registros!</label>
+
+    </div>
+    <div>
+        <ul class="pagination justify-content-center pagination-sm">
+            @if (ViewBag.page > 1)
+            {
+                <li class="page-item"><a class="page-link" href="@App.Extensions.Paginacao.QueryStringToParams(1, Context.Request)">Primeiro</a></li>
+            }
+            @if (ViewBag.page > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link glyphicon glyphicon-chevron-left" href="@App.Extensions.Paginacao.QueryStringToParams(ViewBag.page - 1, Context.Request)">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                </li>
+            }
+            @if (ViewBag.page <= totalPages && ViewBag.page > 1)
+            {
+                <li class="page-item"><a class="page-link" href="@App.Extensions.Paginacao.QueryStringToParams((ViewBag.page - 1), Context.Request)">@(ViewBag.page - 1)</a></li>
+            }
+
+            <li class="page-item active"><a class="page-link" href="#">@(ViewBag.page)</a></li>
+
+            @if (ViewBag.page < totalPages)
+            {
+                <li class="page-item"><a class="page-link" href="@App.Extensions.Paginacao.QueryStringToParams((ViewBag.page + 1), Context.Request)">@(ViewBag.page + 1)</a></li>
+            }
+
+            @if ((ViewBag.page + 2) <= totalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@App.Extensions.Paginacao.QueryStringToParams((ViewBag.page +2), Context.Request)">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </li>
+            }
+
+           
+
+
+        </ul>
+    </div>
+</nav>

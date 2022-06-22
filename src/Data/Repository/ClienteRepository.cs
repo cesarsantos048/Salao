@@ -30,5 +30,9 @@ namespace Data.Repository
                 .Take(take)
                 .ToListAsync();
         }
+        public async Task<int> Total()
+        {
+            return await Db.Clientes.CountAsync();
+        }
     }
 }

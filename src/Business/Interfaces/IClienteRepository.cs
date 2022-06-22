@@ -9,5 +9,7 @@ namespace Business.Interfaces
     {
         Task<Cliente> ObterClienteServicos(Guid id);
         Task<IEnumerable<Cliente>> Ordenar(int skip, int take);
+
+        Task<int> Total();
     }
 }

@@ -24,11 +24,29 @@ namespace App.Controllers
         }
 
         public async Task<IActionResult> Index(
-            [FromQuery] int? skip,
-            [FromQuery] int? take)
+            [FromQuery] int page = 1,
+            [FromQuery] int take = 3
+            )
         {
-            
-            var data = _mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar(skip ?? 0, take ?? 10));
+
+            var total = await _clienteRepository.Total();
+
+            ViewBag.page = page;
+            ViewBag.take = take;
+            ViewBag.total = total;
+
+            if(take > total)
+            {
+                take = total;
+            }
+
+            int skip = 0;
+            if (page > 1)
+            {
+                skip = (int)(take * (page - 1));
+            }
+
+            var data = _mapper.Map<IEnumerable<ClienteViewModel>>(await _clienteRepository.Ordenar(skip, take));
             return View(data);
         }
 
@@ -59,7 +77,7 @@ namespace App.Controllers
             var cliente = _mapper.Map<Cliente>(clienteViewModel);
             await _clienteRepository.Adicionar(cliente);
             return RedirectToAction("Index");
-            
+
         }
 
         public async Task<IActionResult> Edit(Guid id)
@@ -85,7 +103,7 @@ namespace App.Controllers
             await _clienteRepository.Atualizar(cliente);
 
             return RedirectToAction("Index");
-            
+
         }
 
         public async Task<IActionResult> Delete(Guid id)
