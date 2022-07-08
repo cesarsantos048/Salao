@@ -31,7 +31,21 @@ body {
     background-color: #f4dfd9;
 }
 
+.logo {
+    background-color: #f4dfd9;
+    animation-duration: 3s;
+    animation-name: logo;
+}
 
+@keyframes logo {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .footer {
     background-color: transparent;
