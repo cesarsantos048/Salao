@@ -10,6 +10,8 @@ namespace App.AutoMapper
         {
             CreateMap<Cliente, ClienteViewModel>().ReverseMap();
             CreateMap<Servico, ServicoViewModel>().ReverseMap();
+            CreateMap<Produto, ProdutoViewModel>().ReverseMap();
+            CreateMap<Categoria, CategoriaViewModel>().ReverseMap();
         }
     }
 }

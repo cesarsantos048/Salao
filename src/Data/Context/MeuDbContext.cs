@@ -18,6 +18,8 @@ namespace Data.Context
 
         public DbSet<Servico> Servicos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

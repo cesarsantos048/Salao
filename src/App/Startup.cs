@@ -47,6 +47,8 @@ namespace App
             services.AddScoped<MeuDbContext>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<ServicoService, ServicoService>();
 
             services.AddControllersWithViews();
