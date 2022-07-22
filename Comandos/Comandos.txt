@@ -1,0 +1,3 @@
+Para instalar o AutoMapper - install-package AutoMapper.Extensions.Microsoft.DependencyInjection
+Para adicionar migração - Add-Migration "Nome Migracao" -C MeuDbContext
+Para fazer update no banco - > Update-Database -C MeuDbContext

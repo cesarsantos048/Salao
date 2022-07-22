@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.ViewModels;
@@ -55,10 +54,7 @@ namespace App.Controllers
         public async Task<IActionResult> Details(Guid id)
         {
             var clienteViewModel = await ObterClienteServicos(id);
-            if (clienteViewModel == null)
-            {
-                return NotFound();
-            }
+            if (clienteViewModel == null) return NotFound();
 
             return View(clienteViewModel);
         }
